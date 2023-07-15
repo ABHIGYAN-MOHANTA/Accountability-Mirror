@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.textbox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+  background-color: #c3e6c7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  max-width: 300px;
+}
+
+.textbox-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 24px;
+  background-color: transparent;
+}
+
+.textbox-cross {
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #999999;
+  transition: color 0.3s;
+}
+
+.textbox-cross:hover {
+  color: #ff5555;
+}
+
+#camera-feed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.prompt-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.prompt-box div {
+  margin-bottom: 20px;
+}
+
+.prompt-button {
+  padding: 10px 20px;
+  background-color: #004e9b;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.prompt-button:hover {
+  background-color: #007bff;
+}
+
+.instruction-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.instruction-box div {
+  margin-bottom: 20px;
+}
+
+.instruction-box ul {
+  text-align: left;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.instruction-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #999999;
+  transition: color 0.3s;
+}
+
+.instruction-close:hover {
+  color: #ff5555;
+}
+
+/* Responsive Styles */
+
+/* Adjust padding and max-width for smaller screens */
+@media (max-width: 768px) {
+  .textbox {
+    padding: 8px;
+    max-width: 250px;
+  }
+
+  .prompt-box {
+    width: 250px;
+    padding: 16px;
+  }
+
+  .instruction-box {
+    width: 320px;
+    padding: 16px;
+  }
+}
+
+/* Center align the prompt box and instruction box for smaller screens */
+@media (max-width: 480px) {
+  .prompt-box,
+  .instruction-box {
+    width: 90%;
+  }
+}
